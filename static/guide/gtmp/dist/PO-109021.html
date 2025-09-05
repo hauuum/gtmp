@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../gtmp/css/default.css"
+    <script src="../../../jslibrary/jquery-3.5.1.min.js"></script>
+    <script src="../../../jslibrary/echarts.min.js"></script>
+    <!-- <script src="/static/jslibrary/echarts/echarts.min.js"></script> -->
+	<script src="../../../gtmp/js/common.js"></script>
+</head>
+
+<body>
+    <div class="skip">
+        <a href="#content">본문내용 바로가기</a>
+        <a href="#gnb">주메뉴 바로가기</a>
+    </div>
+    <div id="wrap">
+
+        <!-- 헤더 -->
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <h1 class="logo">
+                        <a href="./main.html">
+                            <span class="sr-only">발전용 H급 가스터빈 고용부품용 소재물성 DB</span>
+                        </a>
+                    </h1>
+                    <nav id="gnb">
+                        <ul>
+                            <li class="active">
+                                <a href="./PO-101011-L.html">소재물성조회</a>
+                                <div class="gnb-sub-nav">
+                                    <ul>
+                                        <li><a href="./PO-101011-L.html">상세검색</a></li>
+                                        <li><a href="./PO-101021-L.html">통합검색</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="./PO-102011.html">가스터빈이란</a>
+                                <div class="gnb-sub-nav">
+                                    <ul>
+                                        <li><a href="./PO-102011.html">가스터빈 이란?</a></li>
+                                        <li><a href="./PO-102021.html">가스터빈 사업소개</a></li>
+                                        <li><a href="./PO-102031.html">가스터빈 산업현황</a></li>
+                                        <li><a href="./PO-102041.html">가스터빈 소재</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="./PO-103001-L.html">고온물성 시험절차서</a>
+                                <div class="gnb-sub-nav">
+                                    <ul>
+                                        <li><a href="./PO-103001-L.html">고온물성 시험절차서</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="./PO-104011-L.html">알림/질문/문의</a>
+                                <div class="gnb-sub-nav">
+                                    <ul>
+                                        <li><a href="./PO-104011-L.html">알림</a></li>
+                                        <li><a href="./PO-104021-L.html">자주묻는질문(FAQ)</a></li>
+                                        <li><a href="./PO-104031-L.html">질의응답 (Q&A)</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="./PO-105001.html">참여기관</a>
+                                <div class="gnb-sub-nav">
+                                    <ul>
+                                        <li><a href="./PO-105001.html">참여기관</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="user-menu">
+                        <a href="./PO-107011-E1.html">로그인</a><!-- <a href="">로그아웃</a> -->
+                        <a href="./PO-107021-E2.html">회원가입</a><!-- <a href="">마이페이지</a> -->
+                        <a href="./PO-100021.html" class="i-menu" aria-label="전체 메뉴 열기">
+                            <span class="sr-only">전체메뉴</span>
+                            <i class="ico-menu"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 비주얼 영역 -->
+        <div class="visual visual--01">
+            <p>소재물성조회<i class="ico-srch"></i></p>
+        </div>
+        <!-- <di>v class="visual visual--02">
+            <p>가스터빈이란<i class="ico-gstb"></i></p 
+        </di>
+        <div class="visual visual--03">
+            <p>고온물성 시험절차서<i class="ico-result"></i></p>
+        </div>
+        <div class="visual visual--04">
+            <p>알림/질문/문의<i class="ico-qna"></i></p>
+        </div>
+        <div class="visual visual--05">
+            <p>참여기관<i class="ico-cmpy"></i></p>
+        </div>
+        <div class="visual visual--06">
+            <p>마이페이지<i class="ico-mypage"></i></p>
+        </div> 
+        <div class="visual visual--07">
+            <p>사이트맵<i class="ico-sitemap"></i></p>
+        </div>-->
+        
+        <div id="container">
+            <div class="container-row">
+                <!-- LNB -->
+                <div class="lnb">
+                    <nav>
+                        <ul class="row">
+                            <li class="dp1 on"><a href="" title="선택됨"><span>상세검색</span></a></li>
+                            <li class="dp1"><a href=""><span>통합검색</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- 데이터 피드, 소재물성조회 페이지에서만 사용 -->
+                <div class="row db-feed">
+                    <div class="db-feed-item">
+                        <div class="db-feed-tit">
+                            <span>인기 데이터</span>
+                            <div class="row db-feed-btn">
+                                <span>누적 조회순</span>
+                                <button type="button" class="i-close" title="닫힘">
+                                    <i class="ico-dropup"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <span>1</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                            <li>
+                                <span>2</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                            <li>
+                                <span>3</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                            <li>
+                                <span>4</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                            <li>
+                                <span>5</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="db-feed-item">
+                        <div class="db-feed-tit">
+                            <span>추천 데이터</span>
+                            <div class="row db-feed-btn">
+                                <span>다운로드 순</span>
+                                <button type="button" class="i-open" title="닫힘">
+                                    <i class="ico-dropup"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <span>1</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                            <li>
+                                <span>2</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                            <li>
+                                <span>3</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                            <li>
+                                <span>4</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                            <li>
+                                <span>5</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="db-feed-item">
+                        <div class="db-feed-tit">
+                            <span>최신 데이터</span>
+                            <div class="row db-feed-btn">
+                                <span>등록일자 순</span>
+                                <button  type="button" class="i-open" title="닫힘">
+                                    <i class="ico-dropup"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <span>1</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                            <li>
+                                <span>2</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                            <li>
+                                <span>3</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                            <li>
+                                <span>4</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                            <li>
+                                <span>5</span><a href="">LCF_Rene N5_10_10_10...</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 데이터 피드, 모바일 버전 -->
+                <div class="db-feed--m">
+                    <div class="row tab-list" role="tablist" aria-label="데이터 피드">
+                        <button type="button" id="tab-feed1" class="on" role="tab" aria-selected="true" aria-controls="tab-cont1" title="선택됨"><span>인기데이터</span></button>
+                        <button type="button" id="tab-feed2" role="tab" aria-selected="false" aria-controls="tab-cont2" title=""><span>추천데이터</span></button>
+                        <button type="button" id="tab-feed3" role="tab" aria-selected="false" aria-controls="tab-cont3" title=""><span>최신데이터</span></button>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab-cont1" class="tab-pane on" aria-labelledby="tab-feed1" role="tabpanel">
+                            <div class="right">
+                                <span>누적 조회순</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span>1</span><a href="">한국인 단염기 다형성1</a>
+                                </li>
+                                <li>
+                                    <span>2</span><a href="">상대중력가속도</a>
+                                </li>
+                                <li>
+                                    <span>3</span><a href="">한국인 사이즈 코리아</a>
+                                </li>
+                                <li>
+                                    <span>4</span><a href="">상대중력가속도</a>
+                                </li>
+                                <li>
+                                    <span>5</span><a href="">한국인 단염기 다형성 단염기 다형성</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="tab-cont2" class="tab-pane" aria-labelledby="tab-feed2" role="tabpanel">
+                            <div class="right">
+                                <span>다운로드 순</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span>1</span><a href="">한국인 단염기 다형성2</a>
+                                </li>
+                                <li>
+                                    <span>2</span><a href="">상대중력가속도</a>
+                                </li>
+                                <li>
+                                    <span>3</span><a href="">한국인 사이즈 코리아</a>
+                                </li>
+                                <li>
+                                    <span>4</span><a href="">상대중력가속도</a>
+                                </li>
+                                <li>
+                                    <span>5</span><a href="">한국인 단염기 다형성 단염기 다형성</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="tab-cont3" class="tab-pane" aria-labelledby="tab-feed3" role="tabpanel">
+                            <div class="right">
+                                <span>등록일자순</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span>1</span><a href="">한국인 단염기 다형성3</a>
+                                </li>
+                                <li>
+                                    <span>2</span><a href="">상대중력가속도</a>
+                                </li>
+                                <li>
+                                    <span>3</span><a href="">한국인 사이즈 코리아</a>
+                                </li>
+                                <li>
+                                    <span>4</span><a href="">상대중력가속도</a>
+                                </li>
+                                <li>
+                                    <span>5</span><a href="">한국인 단염기 다형성 단염기 다형성</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <main id="main">
+                <div class="location">
+                    <ol class="row">
+                        <li class="home"><i class="ico-home" aria-label="홈" role="img"></i></li>
+                        <li>소재물성 조회</li>
+                        <li>상세검색</li>
+                    </ol>
+                </div>
+
+                <div id="content">
+                    <!-- 컨텐츠 시작 --><h2 class="tit qnaTit"><span>이용약관</span></h2>
+<h3 class="sub sub--bu1"><span>이용약관</span></h3>
+<div class="join-desc terms">
+    <p>제1장 총칙
+
+        제1조(목적)
+        본 약관은 한국표준과학연구원 소속 발전용 H급 가스터빈 고욘소재물성 플랫폼이 제공하는 모든 서비스(이하 ‘서비스‘)의 이용조건 및 절차, 이용자와 발전용 H급 가스터빈 고욘소재물성 플랫폼의 권리, 의무, 책임사항과 기타 필요한 사항을 규정함을 목적으로 합니다.
+        
+        제2조(용어의 정의)
+        ① 이용자라 함은 당 사이트에 접속하여 이 약관에 따라 당 사이트가 제공하는 서비스를 받는 회원 및 비회원을 말합니다.
+        ② 회원이라 함은 서비스를 이용하기 위하여 당 사이트에 개인정보를 제공하여 회원가입을 완료한 자를 말합니다.
+        
+        제3조(이용약관의 효력 및 변경)
+        ① 이 약관은 당 사이트에 게시하거나 기타의 방법으로 회원에게 질문함으로써 효력이 발생합니다.
+        ② 당 사이트는 이 약관을 개정할 경우에 적용일자 및 개정사유를 명시하여 현행 약관과 함께 당 사이트의 초기화면에 그 적용일자 7일 이전부터 적용일자 전일까지 질문합니다. 다만 회원에게 불리하게 약관내용을 변경하는 경우에는 최소한 30일 이상의 사전 유예기간을 두고 질문합니다. 이 경우 당 사이트는 개정 전 내용과 개정 후 내용을 명확하게 비교하여 이용자가 알기 쉽도록 표시합니다.
+        
+        제4조(약관 외 준칙)
+        ① 이 약관은 당 사이트가 제공하는 서비스에 관한 이용안내와 함께 적용됩니다.
+        ② 이 약관에 명시되지 아니한 사항은 관계법령의 규정이 적용됩니다.
+    </p>
+</div>			</div> <!-- //#content 끝-->
+		</main>
+	</div><!-- //#container 끝-->
+</div><!-- //wrap 끝-->
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="footer-left">
+				<ul class="row">
+					<li><a href=""><em class="org">개인정보처리방침</em></a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="">사이트맵</a></li>
+				</ul>
+				<ul class="row">
+					<li>대전광역시 유성구 가정로 267 전략기술연구소 수소에너지 그룹</li>
+					<li>Tel.042-868-5383</li>
+					<li>Fax.042-868-5635</li>
+					<li>Email.shnahm@kriss.re.kr</li>
+					<li>copyright by GTMP. ALL RIGHTS RESERVED</li>
+				</ul>
+				<div class="footer-logo"></div>
+			</div>
+			<!-- <div class="footer-right">
+				<select name="">
+					<option value="" selected>연관사이트바로가기</option>
+				</select>
+				<div class="row sns">
+					<a href="" target="_blank"><span class="sr-only">페이스북</span><i class="ico-facebook"></i></a>
+					<a href="" target="_blank"><span class="sr-only">유튜브</span><i class="ico-youtube"></i></a>
+					<a href="" target="_blank"><span class="sr-only">네이버 블로그</span><i class="ico-blog"></i></a>
+				</div>
+			</div> -->
+		</div>
+	</div>
+</footer>
+</body>
+</html>
