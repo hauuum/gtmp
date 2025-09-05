@@ -1746,6 +1746,9 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 @media screen and (max-width: 749px) {
+.visual {
+        height: 240px;
+}
 .visual::before {
 background-position: top left !important;
 }
@@ -1773,6 +1776,7 @@ margin: 0 auto 150px;
 .visual p {
 width: calc(100% - 60px);
 font-size: 40px;
+margin: 0 auto 80px;
 }
 }
 .visual p i {
@@ -4832,7 +4836,9 @@ box-sizing: border-box;
 text-align: center;
 }
 .join-step li a{
-display: block;
+display: flex;
+align-items: center;
+justify-content: center;
 width: 100%;
 height: 100%;
 }
